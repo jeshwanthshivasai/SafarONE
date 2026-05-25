@@ -1129,21 +1129,9 @@ button, a {
     display: none !important;
   }
 
-  /* Floating cards stack inline on mobile hero */
+  /* Hide hero floating graphics on mobile */
   .hcard {
-    position: relative !important;
-    top: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    left: auto !important;
-    margin: 12px auto !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    transform: none !important;
-    animation: none !important;
-    opacity: 1 !important; /* Ensure they show on mobile */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    display: none !important;
   }
 
   /* Section breaks */
