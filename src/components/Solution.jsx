@@ -144,21 +144,26 @@ export default function Solution() {
   const [stateIdx, setStateIdx] = useState(0);
 
   useEffect(() => {
-    // Pinned scroll section using GSAP
-    const trigger = ScrollTrigger.create({
-      trigger: '#solSticky',
-      pin: true,
-      pinSpacing: true,
-      start: 'top top',
-      end: '+=220%',
-      onUpdate: (self) => {
-        const idx = Math.min(2, Math.floor(self.progress * 3));
-        setStateIdx(idx);
-      }
-    });
+    // Pinned scroll section using GSAP (desktop only, handled by trigger constraints)
+    const mediaQuery = window.matchMedia('(min-width: 769px)');
+    let trigger = null;
+
+    if (mediaQuery.matches) {
+      trigger = ScrollTrigger.create({
+        trigger: '#solSticky',
+        pin: true,
+        pinSpacing: true,
+        start: 'top top',
+        end: '+=220%',
+        onUpdate: (self) => {
+          const idx = Math.min(2, Math.floor(self.progress * 3));
+          setStateIdx(idx);
+        }
+      });
+    }
 
     return () => {
-      trigger.kill();
+      if (trigger) trigger.kill();
     };
   }, []);
 
@@ -169,7 +174,9 @@ export default function Solution() {
       <div className="sol-sec-label">
         <div style={{ width: 22, height: 1, background: 'currentColor' }}></div>Platform
       </div>
-      <div className="sol-sticky" id="solSticky">
+
+      {/* DESKTOP PINNED LAYOUT */}
+      <div className="sol-sticky sol-desktop-only" id="solSticky">
         <div className="sol-counter" id="solCounter">
           {`0${stateIdx + 1} / 03`}
         </div>
@@ -260,6 +267,74 @@ export default function Solution() {
                 <div className="sol-metric-key">idle fleet time with AI routing</div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* MOBILE STACKED LAYOUT */}
+      <div className="sol-mobile-only">
+        {/* State 1 */}
+        <div className="sol-mob-card">
+          <div className="sol-num">01 — Passengers</div>
+          <div className="sol-title">Real-time clarity, every commute.</div>
+          <div className="sol-body">One tap to see every bus, metro and train—live. No more guessing. No more waiting in the wrong place.</div>
+          <div className="chips">
+            <div className="chip">Live Multi-Modal</div>
+            <div className="chip">Hyper-accurate ETAs</div>
+            <div className="chip">QR Ticketing</div>
+            <div className="chip">Women's Safety</div>
+          </div>
+          <div className="sol-mob-phone-wrapper">
+            <IPhone width={240} height={520}>
+              <Screen1 />
+            </IPhone>
+          </div>
+          <div className="sol-metric">
+            <div className="sol-metric-val">34 min</div>
+            <div className="sol-metric-key">door-to-door multi-modal ETA</div>
+          </div>
+        </div>
+
+        {/* State 2 */}
+        <div className="sol-mob-card">
+          <div className="sol-num">02 — Drivers &amp; Conductors</div>
+          <div className="sol-title">A system that motivates, not monitors.</div>
+          <div className="sol-body">Gamified duty dashboards that reward punctuality, efficiency and service excellence. Drive with pride.</div>
+          <div className="chips">
+            <div className="chip">Duty Dashboard</div>
+            <div className="chip">Punctuality Badges</div>
+            <div className="chip">Fuel Score</div>
+            <div className="chip">Passenger Rating</div>
+          </div>
+          <div className="sol-mob-phone-wrapper">
+            <IPhone width={240} height={520}>
+              <Screen2 />
+            </IPhone>
+          </div>
+          <div className="sol-metric">
+            <div className="sol-metric-val">847 riders</div>
+            <div className="sol-metric-key">served by a single driver today</div>
+          </div>
+        </div>
+
+        {/* State 3 */}
+        <div className="sol-mob-card">
+          <div className="sol-num">03 — RTCs &amp; Government</div>
+          <div className="sol-title">The B2G suite for smarter cities.</div>
+          <div className="sol-body">Full fleet visibility, demand heatmaps and route optimization—helping transport authorities make data-backed decisions in real time.</div>
+          <div className="chips">
+            <div className="chip">Live Fleet Command</div>
+            <div className="chip">Demand Heatmaps</div>
+            <div className="chip">Route Optimization AI</div>
+          </div>
+          <div className="sol-mob-phone-wrapper">
+            <IPhone width={240} height={520}>
+              <Screen3 />
+            </IPhone>
+          </div>
+          <div className="sol-metric">
+            <div className="sol-metric-val">↓ 18%</div>
+            <div className="sol-metric-key">idle fleet time with AI routing</div>
           </div>
         </div>
       </div>

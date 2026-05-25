@@ -76,7 +76,7 @@ export default function Impact() {
             <div className="badge-ico">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <circle cx="10" cy="10" r="7.5" stroke="oklch(64% .16 145)" strokeWidth="1.4"/>
-                <path d="M10 5.5V10L13 13" stroke="oklch(64% .16 145)" strokeWidth="1.4" stroke-linecap="round"/>
+                <path d="M10 5.5V10L13 13" stroke="oklch(64% .16 145)" strokeWidth="1.4" strokeLinecap="round"/>
               </svg>
             </div>
             <div className="badge-name">100 Rides</div>
@@ -103,7 +103,7 @@ export default function Impact() {
           <div className="badge">
             <div className="badge-ico">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M3.5 16L7 8.5l3.5 5.5 2-3.5L17 16" stroke="oklch(64% .16 145)" strokeWidth="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.5 16L7 8.5l3.5 5.5 2-3.5L17 16" stroke="oklch(64% .16 145)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </div>
             <div className="badge-name">Transit Legend</div>
