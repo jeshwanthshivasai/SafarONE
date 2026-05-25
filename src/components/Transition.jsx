@@ -102,9 +102,6 @@ export default function Transition() {
       <section id="transition" data-screen-label="03 Transition">
         <div className="trans-inner">
           <div>
-            <div className="s-lbl r0" style={{ color: 'var(--saffron)' }}>
-              <div className="s-lbl-bar" style={{ background: 'var(--saffron)' }}></div>The Shift
-            </div>
             <h2 className="trans-h2 r0">We're fixing <em>predictability.</em> We're rebuilding <em>trust.</em></h2>
             <p className="trans-body r0">One app. Every mode. Hyper-accurate ETAs, live tracking, digital ticketing, and a safety layer—unified in a single, elegant experience.</p>
             <div className="trans-feats r0">

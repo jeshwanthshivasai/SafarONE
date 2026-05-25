@@ -155,9 +155,6 @@ export default function Problem() {
             </div>
           </div>
           <div>
-            <div className="s-lbl r0">
-              <div className="s-lbl-bar"></div>The Problem
-            </div>
             <h2 className="prob-h2 r0">India's roads weren't designed for this.</h2>
             <p className="prob-body r0">
               Public transport isn't bad—it has become a guessing game. When commuters don't know when their ride will arrive, they shift to personal vehicles. And our cities choke.

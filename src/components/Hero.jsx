@@ -15,11 +15,10 @@ export default function Hero() {
 
     // Content entrance
     gsap.timeline({ delay: 0.2 })
-      .to('.hero-tag', { opacity: 1, y: 0, duration: 0.75, ease: 'power3.out' })
-      .to('.hero-h1', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, '-=0.35')
-      .to('.hero-sub', { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }, '-=0.5')
-      .to('.hero-actions', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-      .to('.hero-scroll', { opacity: 1, duration: 0.6 }, '-=0.2');
+      .to('.hero-h1',   { opacity: 1, y: 0, duration: 1,  ease: 'power3.out' })
+      .to('.hero-sub',  { opacity: 1, y: 0, duration: 0.8,  ease: 'power3.out' }, '-=0.5')
+      .to('.hero-actions',{ opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
+      .to('.hero-scroll',{ opacity: 1, duration: 0.6 }, '-=0.2');
   }, []);
 
   return (
@@ -95,10 +94,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-tag">
-          <div className="htag-bar"></div>
-          <span className="htag-txt">India's First Integrated Transit Platform</span>
-        </div>
         <h1 className="hero-h1"><em>SafarONE.</em><br />Digitizing,<br />Humanizing<br />India's Transit.</h1>
         <p className="hero-sub">The first truly integrated multi-modal, real-time public transport platform—unifying buses, metros, trains and last-mile connectivity for 1.4 billion people.</p>
         <div className="hero-actions">

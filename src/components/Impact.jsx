@@ -60,9 +60,6 @@ export default function Impact() {
       <div className="imp-inner">
         <div className="imp-top">
           <div>
-            <div className="s-lbl g" style={{ marginBottom: '18px' }}>
-              <div className="s-lbl-bar"></div>Sustainability
-            </div>
             <div className="ctr-num" id="co2Ctr">0</div>
             <span className="ctr-unit">kg of CO₂ saved &amp; counting</span>
           </div>

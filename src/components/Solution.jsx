@@ -171,9 +171,6 @@ export default function Solution() {
 
   return (
     <section id="solution" data-screen-label="04 Solution">
-      <div className="sol-sec-label">
-        <div style={{ width: 22, height: 1, background: 'currentColor' }}></div>Platform
-      </div>
 
       {/* DESKTOP PINNED LAYOUT */}
       <div className="sol-sticky sol-desktop-only" id="solSticky">
