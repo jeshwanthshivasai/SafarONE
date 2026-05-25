@@ -94,10 +94,7 @@ export default function Transition() {
   return (
     <>
       {/* Section break */}
-      <div className="sec-break">
-        <div className="sec-break-lbl" style={{ background: 'var(--white)', color: 'rgba(13,15,20,.3)' }}>The Shift</div>
-        <div className="sec-break-num" style={{ background: 'var(--white)', color: 'rgba(13,15,20,.18)' }}>03 / 06</div>
-      </div>
+      <div className="sec-break" />
 
       <section id="transition" data-screen-label="03 Transition">
         <div className="trans-inner">

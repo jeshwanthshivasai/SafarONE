@@ -110,10 +110,7 @@ export default function Problem() {
   return (
     <>
       {/* Section break */}
-      <div className="sec-break" style={{ background: 'var(--dark)' }}>
-        <div className="sec-break-lbl" style={{ background: 'var(--dark)' }}>The Problem</div>
-        <div className="sec-break-num" style={{ background: 'var(--dark)' }}>02 / 06</div>
-      </div>
+      <div className="sec-break" />
 
       <section id="problem" data-screen-label="02 Problem">
         <div className="prob-inner">
