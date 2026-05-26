@@ -17,8 +17,7 @@ export default function Hero() {
     gsap.timeline({ delay: 0.2 })
       .to('.hero-h1',   { opacity: 1, y: 0, duration: 1,  ease: 'power3.out' })
       .to('.hero-sub',  { opacity: 1, y: 0, duration: 0.8,  ease: 'power3.out' }, '-=0.5')
-      .to('.hero-actions',{ opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4')
-      .to('.hero-scroll',{ opacity: 1, duration: 0.6 }, '-=0.2');
+      .to('.hero-actions',{ opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.4');
   }, []);
 
   return (
@@ -137,10 +136,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hero-scroll">
-        <div className="strack"></div>
-        <span className="slbl">Scroll</span>
-      </div>
+
     </section>
   );
 }
